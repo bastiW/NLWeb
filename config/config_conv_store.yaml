@@ -6,7 +6,6 @@ default_storage: qdrant_local
 
 # Storage endpoints configuration
 storage_endpoints:
-
   # Azure AI Search storage
   azure_search:
     enabled: false
@@ -18,7 +17,7 @@ storage_endpoints:
     collection_name: nlweb_conversations
     # Vector size for embeddings
     vector_size: 1536
-    
+
   # Azure Cosmos DB storage
   cosmos_db:
     enabled: false
@@ -60,7 +59,7 @@ storage_endpoints:
     # Maximum conversations to keep in memory
     max_conversations: 10000
     # TTL in seconds (optional)
-    ttl_seconds: 86400  # 24 hours
+    ttl_seconds: 86400 # 24 hours
 
   # PostgreSQL with pgvector
   postgres:
@@ -88,7 +87,7 @@ storage_endpoints:
     collection_name: nlweb_conversations
     # Vector size for embeddings
     vector_size: 1536
-    
+
   # Remote Qdrant server
   qdrant_remote:
     enabled: false
@@ -106,25 +105,25 @@ storage_endpoints:
 storage_behavior:
   # Whether to store conversations for anonymous users
   store_anonymous: true
-  
+
   # Maximum conversation history per thread
   max_conversations_per_thread: 100
-  
+
   # Maximum threads per user
   max_threads_per_user: 1000
-  
+
   # Conversation retention policy (in days)
   retention_days: 365
-  
+
   # Whether to compute embeddings for conversations
   compute_embeddings: true
-  
+
   # Batch size for bulk operations
   batch_size: 100
-  
+
   # Enable conversation search
   enable_search: true
-  
+
   # Migration settings
   migration:
     # Auto-migrate from localStorage when user logs in
